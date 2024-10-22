@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Version="3" Minor="2" Path="D:/work/anlogic_project/camera_mipi_ddr_hdmi_1/td_project">
+<Project Version="3" Minor="2" Path="D:/work/cam_system/td_project">
     <Project_Created_Time></Project_Created_Time>
     <TD_Version>5.6.119222</TD_Version>
-    <Name>Verimake_camerasc2210_mipi_ddr_hdmi</Name>
+    <Name>cam_system</Name>
     <HardWare>
         <Family>PH1</Family>
         <Device>PH1A90SBG484</Device>
@@ -330,7 +330,7 @@
                     <Attr Name="CompileOrder" Val="48"/>
                 </FileInfo>
             </File>
-            <File Path="../user_source/hdl_source/video_processing/Gray_Sobel_Erosion/VIP_Bit_Erosion_Detector.v">
+            <File Path="../user_source/hdl_source/video_processing/key/debouncer.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
@@ -338,7 +338,7 @@
                     <Attr Name="CompileOrder" Val="49"/>
                 </FileInfo>
             </File>
-            <File Path="../user_source/hdl_source/video_processing/Gray_Sobel_Erosion/VIP_Matrix_Generate_3X3_1Bit.v">
+            <File Path="../user_source/hdl_source/video_processing/key/state_control.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
@@ -346,39 +346,7 @@
                     <Attr Name="CompileOrder" Val="50"/>
                 </FileInfo>
             </File>
-            <File Path="../user_source/hdl_source/video_processing/Gray_Sobel_Erosion/VIP_Matrix_Generate_3X3_8Bit.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="51"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/Gray_Sobel_Erosion/VIP_Sobel_Edge_Detector.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="52"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/Gray_Sobel_Erosion/Video_Image_Processor.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="53"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/RGB888_YCbCr444/Image_RGB888_YCbCr444.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="54"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/key/debouncer.v">
+            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/Image_RGB888_YCbCr444.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
@@ -386,7 +354,7 @@
                     <Attr Name="CompileOrder" Val="55"/>
                 </FileInfo>
             </File>
-            <File Path="../user_source/hdl_source/video_processing/key/state_control.v">
+            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/Matrix_Generate_3X3_8Bit.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
@@ -394,12 +362,36 @@
                     <Attr Name="CompileOrder" Val="56"/>
                 </FileInfo>
             </File>
-            <File Path="al_ip/AnlCORDIC_sqrt.v">
+            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/Video_Image_Processor.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="61"/>
+                    <Attr Name="CompileOrder" Val="57"/>
+                </FileInfo>
+            </File>
+            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/sobel_sharpen_proc.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="58"/>
+                </FileInfo>
+            </File>
+            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/sqrt.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="59"/>
+                </FileInfo>
+            </File>
+            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/sync_fifo.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="60"/>
                 </FileInfo>
             </File>
         </Verilog>
@@ -409,7 +401,7 @@
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="57"/>
+                    <Attr Name="CompileOrder" Val="51"/>
                 </FileInfo>
             </File>
             <File Path="../user_source/hdl_source/video_processing/linebuffer_Wapper/ImageXlib_utils.vhd">
@@ -417,7 +409,7 @@
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="58"/>
+                    <Attr Name="CompileOrder" Val="52"/>
                 </FileInfo>
             </File>
             <File Path="../user_source/hdl_source/video_processing/linebuffer_Wapper/linebuffer_Wapper.vhd">
@@ -425,7 +417,7 @@
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="59"/>
+                    <Attr Name="CompileOrder" Val="53"/>
                 </FileInfo>
             </File>
         </VHDL>
@@ -459,6 +451,16 @@
                 </FileInfo>
             </File>
         </SDC_FILE>
+        <CWC_FILE>
+            <File Path="img_sobel.cwc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="61"/>
+                </FileInfo>
+            </File>
+        </CWC_FILE>
         <IP_FILE>
             <File Path="../user_source/ip_source/PLL.ipc">
                 <FileInfo>
@@ -518,10 +520,11 @@
             </File>
             <File Path="al_ip/AnlCORDIC_sqrt.ipc">
                 <FileInfo>
+                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="60"/>
+                    <Attr Name="CompileOrder" Val="54"/>
                 </FileInfo>
             </File>
         </IP_FILE>
@@ -544,37 +547,25 @@
     <Configurations>
     </Configurations>
     <Runs>
-        <Run Name="syn_1" Type="Synthesis" ConstraintSet="constraint_1" Description="">
+        <Run Name="syn_2" Type="Synthesis" ConstraintSet="constraint_1" Description="">
             <Strategy Name="Default_Synthesis_Strategy">
             </Strategy>
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="syn_2" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
+        <Run Name="syn_3" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
             <Strategy Name="Default_Synthesis_Strategy">
             </Strategy>
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="syn_3" Type="Synthesis" ConstraintSet="constraint_1" Description="">
-            <Strategy Name="Default_Synthesis_Strategy">
-            </Strategy>
-            <UserParams>
-            </UserParams>
-        </Run>
-        <Run Name="phy_1" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_1">
+        <Run Name="phy_2" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_2">
             <Strategy Name="Default_PhysicalDesign_Strategy">
             </Strategy>
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="phy_2" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_2" Active="true">
-            <Strategy Name="Default_PhysicalDesign_Strategy">
-            </Strategy>
-            <UserParams>
-            </UserParams>
-        </Run>
-        <Run Name="phy_3" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_3">
+        <Run Name="phy_1" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_3" Active="true">
             <Strategy Name="Default_PhysicalDesign_Strategy">
             </Strategy>
             <UserParams>

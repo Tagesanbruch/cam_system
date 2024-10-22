@@ -685,6 +685,9 @@ u_uifdma_axi_ddr
     wire [7:0] Sobel_Threshold;
 	wire [23:0]post_img_pixel;
     wire [7:0] post_img_Y		;
+    wire [7:0] post_img_red		;
+    wire [7:0] post_img_green		;
+    wire [7:0] post_img_blue		;
     wire [7:0] state;
 
     assign clk  			    =       vtc_clk        ;
@@ -696,7 +699,8 @@ u_uifdma_axi_ddr
     assign per_img_green		=       w_crop_data[15:8];
     assign per_img_blue		    =       w_crop_data[7:0];
     assign Sobel_Threshold      =       8'd20;
-    assign post_img_pixel 		=  		(state > 15) ? {24{post_img_Bit}} : {post_img_Y, post_img_Y, post_img_Y};
+    // assign post_img_pixel 		=  		(state > 15) ? {24{post_img_Bit}} : {post_img_Y, post_img_Y, post_img_Y};
+    assign post_img_pixel 		=  		{post_img_red, post_img_green, post_img_blue};
 //    assign post_img_pixel 		=  		S_rx_axis_m_data;
     
     Video_Image_Processor#(
@@ -705,8 +709,7 @@ u_uifdma_axi_ddr
     )u_Video_Image_Processor
     (
         //global clock
-        .clk  			    (clk  			),       //cmos video pixel clock
-        .rst_n			    (rst_n			),       //global reset
+
         .per_frame_vsync    (per_frame_vsync),       //Prepared Image data vsync valid signal
         .per_frame_href     (per_frame_href),	        //Prepared Image data href vaild  signal
         .per_frame_clken    (per_frame_clken),       //Prepared Image data output/capture enable clock
@@ -718,7 +721,13 @@ u_uifdma_axi_ddr
         .post_frame_clken   (post_frame_clken),	    //Processed Image data output/capture enable clock
         .post_img_Bit	    (post_img_Bit),
         .post_img_Y         (post_img_Y),       //Processed Image brightness output
-        .Sobel_Threshold    (Sobel_Threshold)		//Sobel Threshold for image edge detect	
+        .post_img_red         (post_img_red),       //Processed Image brightness output
+        .post_img_green         (post_img_green),       //Processed Image brightness output
+        .post_img_blue         (post_img_blue),       //Processed Image brightness output
+        // .Sobel_Threshold    (Sobel_Threshold)		//Sobel Threshold for image edge detect	
+    
+    	.clk  			    (clk  			),       //cmos video pixel clock
+        .rst_n			    (rst_n			)       //global reset
     );
 
     uivtc#

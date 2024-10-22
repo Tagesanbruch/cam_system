@@ -1,0 +1,84 @@
+<chipwatcher project_name="cam_system" bit_file="cam_system_Runs/phy_1/cam_system.bit" bid_file="cam_system_Runs/phy_1/cam_system_inst.bid" chip_name="PH1A90SBG484">
+<!-- HMAC is: 86f4e55b668ca9335353faf2a0b55da413912d8c55d67a9213661b919c8519f8 -->
+	<instance name="auto_chipwatcher_0" id="0" enabled="yes">
+		<clock clk_name="I_sys_clk_25m" polarity="posedge"/>
+		<config bram_name="auto_chipwatcher_0_logicbram" sample_depth="4096"/>
+		<signal_vec>
+			<data_nets>
+				<net name="post_img_blue[0]"/>
+				<net name="post_img_blue[1]"/>
+				<net name="post_img_blue[2]"/>
+				<net name="post_img_blue[3]"/>
+				<net name="post_img_blue[4]"/>
+				<net name="post_img_blue[5]"/>
+				<net name="post_img_blue[6]"/>
+				<net name="post_img_blue[7]"/>
+				<net name="post_img_green[0]"/>
+				<net name="post_img_green[1]"/>
+				<net name="post_img_green[2]"/>
+				<net name="post_img_green[3]"/>
+				<net name="post_img_green[4]"/>
+				<net name="post_img_green[5]"/>
+				<net name="post_img_green[6]"/>
+				<net name="post_img_green[7]"/>
+				<net name="post_img_red[0]"/>
+				<net name="post_img_red[1]"/>
+				<net name="post_img_red[2]"/>
+				<net name="post_img_red[3]"/>
+				<net name="post_img_red[4]"/>
+				<net name="post_img_red[5]"/>
+				<net name="post_img_red[6]"/>
+				<net name="post_img_red[7]"/>
+				<net name="u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_href_r2[0]"/>
+				<net name="u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_vsync_r2[0]"/>
+				<net name="w_rgb_href"/>
+			</data_nets>
+			<watcher_nodes>
+				<bus name="post_img_blue" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="post_img_blue[7]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[6]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[5]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[4]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[3]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[2]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[1]" type="reg" trigger="enable"/>
+					<net name="post_img_blue[0]" type="reg" trigger="enable"/>
+				</bus>
+				<bus name="post_img_green" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="post_img_green[7]" type="reg" trigger="enable"/>
+					<net name="post_img_green[6]" type="reg" trigger="enable"/>
+					<net name="post_img_green[5]" type="reg" trigger="enable"/>
+					<net name="post_img_green[4]" type="reg" trigger="enable"/>
+					<net name="post_img_green[3]" type="reg" trigger="enable"/>
+					<net name="post_img_green[2]" type="reg" trigger="enable"/>
+					<net name="post_img_green[1]" type="reg" trigger="enable"/>
+					<net name="post_img_green[0]" type="reg" trigger="enable"/>
+				</bus>
+				<bus name="post_img_red" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="post_img_red[7]" type="reg" trigger="enable"/>
+					<net name="post_img_red[6]" type="reg" trigger="enable"/>
+					<net name="post_img_red[5]" type="reg" trigger="enable"/>
+					<net name="post_img_red[4]" type="reg" trigger="enable"/>
+					<net name="post_img_red[3]" type="reg" trigger="enable"/>
+					<net name="post_img_red[2]" type="reg" trigger="enable"/>
+					<net name="post_img_red[1]" type="reg" trigger="enable"/>
+					<net name="post_img_red[0]" type="reg" trigger="enable"/>
+				</bus>
+				<bus name="u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_href_r2" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_href_r2[0]" type="comb" trigger="enable"/>
+				</bus>
+				<bus name="u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_vsync_r2" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_vsync_r2[0]" type="reg" trigger="enable"/>
+				</bus>
+				<net name="w_rgb_href" op="equal" type="reg" trigger="enable"/>
+			</watcher_nodes>
+		</signal_vec>
+		<trigger name="auto_chipwatcher_0_trigger" position="pre">
+			<condition level="1" enabled="yes" type="basic_and">
+				post_img_blue[0] == low && post_img_blue[1] == low && post_img_blue[2] == low && post_img_blue[3] == low && post_img_blue[4] == low && post_img_blue[5] == low && post_img_blue[6] == low && post_img_blue[7] == low && post_img_green[0] == low && post_img_green[1] == low && post_img_green[2] == low && post_img_green[3] == low && post_img_green[4] == low && post_img_green[5] == low && post_img_green[6] == low && post_img_green[7] == low && post_img_red[0] == low && post_img_red[1] == low && post_img_red[2] == low && post_img_red[3] == low && post_img_red[4] == low && post_img_red[5] == low && post_img_red[6] == low && post_img_red[7] == low && u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_href_r2[0] == low && u_Video_Image_Processor/u_sobel_sharpen_proc_r/matrix_img_vsync_r2[0] == low && w_rgb_href == any
+			</condition>
+			<log>
+			</log>
+		</trigger>
+	</instance>
+</chipwatcher>
