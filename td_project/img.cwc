@@ -1,0 +1,28 @@
+<chipwatcher project_name="Verimake_camerasc2210_mipi_ddr_hdmi" bit_file="Verimake_camerasc2210_mipi_ddr_hdmi_Runs/phy_2/Verimake_camerasc2210_mipi_ddr_hdmi.bit" bid_file="Verimake_camerasc2210_mipi_ddr_hdmi_Runs/phy_2/Verimake_camerasc2210_mipi_ddr_hdmi_inst.bid" chip_name="PH1A90SBG484">
+<!-- HMAC is: 88fb9410d92b387c0dbdcea6a1af1459d16a85c1f5d0cc353429e3e0a4d970f0 -->
+	<instance name="auto_chipwatcher_0" id="0" enabled="yes">
+		<clock clk_name="I_sys_clk_25m" polarity="posedge"/>
+		<config bram_name="auto_chipwatcher_0_logicbram" sample_depth="4096"/>
+		<signal_vec>
+			<data_nets>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit1"/>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit2"/>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit3"/>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit4"/>
+			</data_nets>
+			<watcher_nodes>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit1" op="equal" type="reg" trigger="enable"/>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit2" op="equal" type="reg" trigger="enable"/>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit3" op="equal" type="reg" trigger="enable"/>
+				<net name="u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit4" op="equal" type="reg" trigger="enable"/>
+			</watcher_nodes>
+		</signal_vec>
+		<trigger name="auto_chipwatcher_0_trigger" position="pre">
+			<condition level="1" enabled="yes" type="basic_and">
+				u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit1 == any && u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit2 == any && u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit3 == any && u_Video_Image_Processor/u_VIP_Bit_Erosion_Detector/post_img_Bit4 == any
+			</condition>
+			<log>
+			</log>
+		</trigger>
+	</instance>
+</chipwatcher>

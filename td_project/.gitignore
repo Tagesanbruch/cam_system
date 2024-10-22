@@ -1,0 +1,16 @@
+phy_*/
+syn_*/
+sim_do/
+
+*.log
+*.area
+*.db
+*.tsm
+*.timing
+*.bid
+*.info
+*.rpt
+*.back
+*bak.cwc
+*.png
+*.logw

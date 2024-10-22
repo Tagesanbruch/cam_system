@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Cordic_Config>
+    <GeneralConfig>
+        <Type>PH1_LOGIC_CORDIC</Type>
+        <Device>PH1A90SBG484</Device>
+        <create_VHDL>false</create_VHDL>
+        <inst>AnlCORDIC_sqrt</inst>
+        <Functional_Selection>sqrt</Functional_Selection>
+        <Architectural_Configuration>Serial</Architectural_Configuration>
+        <Phase_Format>Radians</Phase_Format>
+        <Compensation_Scaling>No Compensation</Compensation_Scaling>
+        <Iterations>10</Iterations>
+        <Precision>20</Precision>
+    </GeneralConfig>
+    <GeneratedFiles>
+        <GateVerilog Enable="true">AnlCORDIC_sqrt_gate.v</GateVerilog>
+    </GeneratedFiles>
+</Cordic_Config>
