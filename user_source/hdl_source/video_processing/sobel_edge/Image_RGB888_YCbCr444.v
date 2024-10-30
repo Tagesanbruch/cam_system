@@ -17,8 +17,8 @@
 `timescale 1ns/1ns
 module Image_RGB888_YCbCr444
 #(
-    parameter   [11:0]  IMG_HDISP = 12'd640,                //  640*480
-    parameter   [11:0]  IMG_VDISP = 12'd480
+    parameter   [15:0]  IMG_HDISP = 16'd640,                //  640*480
+    parameter   [15:0]  IMG_VDISP = 16'd480
 )
 (
 	//global clock

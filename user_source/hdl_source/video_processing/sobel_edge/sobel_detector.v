@@ -16,8 +16,8 @@
 // *********************************************************************
 module sobel_detector
 #(
-    parameter   [10:0]  IMG_HDISP = 11'd640,                //  640*480
-    parameter   [10:0]  IMG_VDISP = 11'd480
+    parameter   [15:0]  IMG_HDISP = 16'd640,                //  640*480
+    parameter   [15:0]  IMG_VDISP = 16'd480
 )
 (
     input  wire                 clk             ,

@@ -670,43 +670,43 @@ u_uifdma_axi_ddr
     .O_awb_data     (w_crop_data)
     );
 
-    wire clk  			;
-    wire rst_n			;
-    wire per_frame_vsync;
-    wire per_frame_href;
-    wire per_frame_clken;
-    wire [7:0] per_img_red		;
-    wire [7:0] per_img_green		;
-    wire [7:0] per_img_blue		;
-    wire post_frame_vsync;
-    wire post_frame_href;
-    wire post_frame_clken;
-    wire post_img_Bit;
-    wire [7:0] Sobel_Threshold;
-	wire [23:0]post_img_pixel;
-    wire [7:0] post_img_Y		;
-    wire [7:0] post_img_red		;
-    wire [7:0] post_img_green		;
-    wire [7:0] post_img_blue		;
-    wire [4:0] state;
+    wire clk  			        ;//synthesis keep
+    wire rst_n			        ;//synthesis keep
+    wire per_frame_vsync        ;//synthesis keep
+    wire per_frame_href         ;//synthesis keep
+    wire per_frame_clken        ;//synthesis keep
+    wire [7:0] per_img_red      ;//synthesis keep
+    wire [7:0] per_img_green    ;//synthesis keep
+    wire [7:0] per_img_blue     ;//synthesis keep
+    wire post_frame_vsync       ;//synthesis keep
+    wire post_frame_href        ;//synthesis keep
+    wire post_frame_clken       ;//synthesis keep
+    wire post_img_Bit           ;//synthesis keep
+    wire [7:0] Sobel_Threshold  ;//synthesis keep
+	wire [23:0]post_img_pixel   ;//synthesis keep
+    wire [7:0] post_img_Y		;//synthesis keep
+    wire [7:0] post_img_red		;//synthesis keep
+    wire [7:0] post_img_green	;//synthesis keep
+    wire [7:0] post_img_blue	;//synthesis keep
+    wire [4:0] state            ;//synthesis keep
 
-    assign clk  			    =       vtc_clk        ;
-    assign rst_n			    =       vtc_rstn              ;
-    assign per_frame_vsync      =       w_crop_vs;  
-    assign per_frame_href       =       w_crop_de;   
-    assign per_frame_clken      =       w_crop_de;      
-    assign per_img_red		    =       w_crop_data[23:16];
-    assign per_img_green		=       w_crop_data[15:8];
-    assign per_img_blue		    =       w_crop_data[7:0];
+    assign clk  			    =       vtc_clk        ;       
+    assign rst_n			    =       vtc_rstn         ;     
+    assign per_frame_vsync      =       w_crop_vs;             
+    assign per_frame_href       =       w_crop_de;             
+    assign per_frame_clken      =       w_crop_de;             
+    assign per_img_red		    =       w_crop_data[23:16];    
+    assign per_img_green		=       w_crop_data[15:8];     
+    assign per_img_blue		    =       w_crop_data[7:0];      
     assign Sobel_Threshold      =       (state < 5'd8)? 8'd80 : state << 3;
     // assign post_img_pixel 		=  		{24{post_img_Bit}} : {post_img_Y, post_img_Y, post_img_Y};
-    assign post_img_pixel 		=  		{post_img_Y, post_img_Y, post_img_Y};
+    assign post_img_pixel 		=  		{post_img_Y, post_img_Y, post_img_Y}; // synthesis keep
     // assign post_img_pixel 		=  		{post_img_red, post_img_green, post_img_blue};
 //    assign post_img_pixel 		=  		S_rx_axis_m_data;
     
     Video_Image_Processor#(
-        .IMG_HDISP(12'd1920),	//1280*720
-        .IMG_VDISP(12'd1080)
+        .IMG_HDISP(12'd2200),	//1920+88+44+148
+        .IMG_VDISP(12'd1125) 	
     )u_Video_Image_Processor
     (
         //global clock

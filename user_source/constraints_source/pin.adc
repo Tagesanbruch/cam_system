@@ -31,5 +31,5 @@ set_pin_assignment	{ rgmii_txd[1] }	{ LOCATION = J21; IOSTANDARD = LVCMOS33; }
 set_pin_assignment	{ rgmii_txd[2] }	{ LOCATION = J22; IOSTANDARD = LVCMOS33; }
 set_pin_assignment	{ rgmii_txd[3] }	{ LOCATION = J20; IOSTANDARD = LVCMOS33; }
 
-set_inst_assignment { u_mipi_dphy_rx_ph1a_mipiio_wrapper/u_ph1a_mipiio_wrapper/u_PH1_PHY_MIPIIO } { location=X5Y0Z0; }  #dphy0位置是X5Y0Z0，dphy1位置是X5Y20Z0
+set_inst_assignment { u_mipi_dphy_rx_ph1a_mipiio_wrapper/u_ph1a_mipiio_wrapper/u_PH1_PHY_MIPIIO } { location=X5Y20Z0; }  #dphy0位置是X5Y0Z0，dphy1位置是X5Y20Z0
 
