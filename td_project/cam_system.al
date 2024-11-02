@@ -346,78 +346,6 @@
                     <Attr Name="CompileOrder" Val="50"/>
                 </FileInfo>
             </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/Matrix_Generate_3X3_8Bit.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="55"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/sqrt.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="56"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_sharpen/sync_fifo.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="57"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_edge/Image_RGB888_YCbCr444.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="58"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_edge/Matrix_Generate_3X3_8Bit.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="59"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_edge/Video_Image_Processor.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="60"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_edge/sobel_detector.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="61"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_edge/sqrt.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="62"/>
-                </FileInfo>
-            </File>
-            <File Path="../user_source/hdl_source/video_processing/sobel_edge/sync_fifo.v">
-                <FileInfo>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="63"/>
-                </FileInfo>
-            </File>
         </Verilog>
         <VHDL>
             <File Path="../user_source/hdl_source/video_processing/linebuffer_Wapper/ImageXlib_arch.vhd">
@@ -475,6 +403,16 @@
                 </FileInfo>
             </File>
         </SDC_FILE>
+        <CWC_FILE>
+            <File Path="img_sobel.cwc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="55"/>
+                </FileInfo>
+            </File>
+        </CWC_FILE>
         <IP_FILE>
             <File Path="../user_source/ip_source/PLL.ipc">
                 <FileInfo>
@@ -573,7 +511,13 @@
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="syn_4" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
+        <Run Name="syn_4" Type="Synthesis" ConstraintSet="constraint_1" Description="">
+            <Strategy Name="Default_Synthesis_Strategy">
+            </Strategy>
+            <UserParams>
+            </UserParams>
+        </Run>
+        <Run Name="syn_5" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
             <Strategy Name="Default_Synthesis_Strategy">
             </Strategy>
             <UserParams>
@@ -591,7 +535,13 @@
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="phy_3" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_4" Active="true">
+        <Run Name="phy_3" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_4">
+            <Strategy Name="Default_PhysicalDesign_Strategy">
+            </Strategy>
+            <UserParams>
+            </UserParams>
+        </Run>
+        <Run Name="phy_4" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_5" Active="true">
             <Strategy Name="Default_PhysicalDesign_Strategy">
             </Strategy>
             <UserParams>

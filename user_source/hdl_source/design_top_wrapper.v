@@ -268,8 +268,10 @@ module design_top_wrapper (
 
     wire ud_wclk,ud_wvs,ud_wde;
     wire [31:0] ud_wdata;//synthesis keep
+    wire [63:0] ud_wdata_64;//synthesis keep
     wire ud_rclk,ud_rvs,ud_rde;
     wire [31:0] ud_rdata;//synthesis keep
+    wire [64:0] ud_rdata_64;//synthesis keep
     wire [23:0] video_hdmi_data;
     
     assign S_Ethernet_clk = I_sys_clk_25m;
@@ -475,6 +477,7 @@ u_uifdma_axi_ddr
     assign ud_wvs    = S_csi_rx_vsync0;//S_rgb888_frame_start;//vtc_vs;
     assign ud_wde    = S_raw8_cut_valid;//S_fifo_rd_valid;//S_fifo_rd_en & (~S_fifo_empty);////vtc_de;
     assign ud_wdata  = S_raw8_cut_data;//pixelcont;//S_raw8_cut_data;//{8'd0,S_fifo_rd_data};//S_awb_data;//{8'd0,S_fifo_rd_data};//{8'd0,rgb_r,rgb_g,rgb_b};
+    assign ud_wdata_64 = {32'd0, ud_wdata};
 
     assign ud_rclk   = S_hdmi_clk;
     assign ud_rvs    = vtc_vs;
@@ -489,8 +492,8 @@ u_uifdma_axi_ddr
     .AXI_DATA_WIDTH(AXI_DATA_WIDTH),
     .AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
 
-    .W_BUFDEPTH(1024),
-    .W_DATAWIDTH(32),//32
+    .W_BUFDEPTH(2048),
+    .W_DATAWIDTH(64),//32
     .W_BASEADDR(0),
     .W_DSIZEBITS(25),//23
     .W_XSIZE(480),
@@ -499,8 +502,8 @@ u_uifdma_axi_ddr
     .W_XDIV(1), //2
     .W_BUFSIZE(3),
 
-    .R_BUFDEPTH(1024),
-    .R_DATAWIDTH(32),
+    .R_BUFDEPTH(2048),
+    .R_DATAWIDTH(64),
     .R_BASEADDR(0),
     .R_DSIZEBITS(25),//23
     .R_XSIZE(480),
@@ -517,7 +520,7 @@ u_uifdma_axi_ddr
     .I_W_FS(ud_wvs),
     .I_W_clk(ud_wclk),
     .I_W_wren(ud_wde),
-    .I_W_data(ud_wdata), 
+    .I_W_data(ud_wdata_64), 
     .O_W_sync_cnt(wbuf_sync_o),
     .I_W_buf(wbuf_sync_o),
     .O_W_full(),
@@ -525,7 +528,7 @@ u_uifdma_axi_ddr
     .I_R_FS(ud_rvs),
     .I_R_clk(ud_rclk),
     .I_R_rden(ud_rde),
-    .O_R_data(ud_rdata),
+    .O_R_data(ud_rdata_64),
     .O_R_sync_cnt(),
     .I_R_buf(rbuf_sync_o),
     .O_R_empty(),
@@ -563,6 +566,7 @@ u_uifdma_axi_ddr
 
 
     //以下代码需要注意时序设计，在正确的时序输出
+    assign ud_rdata = ud_rdata_64[31:0];
     reg [1 :0] ud_rdata_cnt; //synthesis keep
     reg [7 :0] ud_rdata_d1;//synthesis keep
    // reg  vtc_user_d1;//synthesis keep

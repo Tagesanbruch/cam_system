@@ -1,7 +1,7 @@
 phy_*/
 syn_*/
 sim_do/
-
+bak/*
 *.log
 *.area
 *.db
