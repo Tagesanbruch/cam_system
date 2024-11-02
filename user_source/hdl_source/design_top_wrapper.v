@@ -702,7 +702,8 @@ u_uifdma_axi_ddr
     assign per_img_red		    =       w_crop_data[23:16];
     assign per_img_green		=       w_crop_data[15:8];
     assign per_img_blue		    =       w_crop_data[7:0];
-    assign Sobel_Threshold      =       (state < 5'd8)? 8'd80 : state << 3;
+//    assign Sobel_Threshold      =       (state < 5'd8)? 8'd80 : state << 3;
+    assign Sobel_Threshold      =       8'd48;
     // assign post_img_pixel 		=  		{24{post_img_Bit}} : {post_img_Y, post_img_Y, post_img_Y};
     assign post_img_pixel 		=  		{post_img_Y, post_img_Y, post_img_Y};
     // assign post_img_pixel 		=  		{post_img_red, post_img_green, post_img_blue};
@@ -869,33 +870,33 @@ u_uifdma_axi_ddr
     );
 
     
-    al_temac u_al_temac(
-    //   // 异步复位
-    //   input         reset_n,
-    //   // 时钟
-    //   input wire    sysclk_P,
-    //   // RGMII 接口
-    //   output [3:0]  rgmii_txd,
-    //   output        rgmii_tx_ctl,
-    //   output        rgmii_txc,
-    //   input  [3:0]  rgmii_rxd,
-    //   input         rgmii_rx_ctl,
-    //   input         rgmii_rxc,
-    //   // MDIO 接口
-    //   //---------------
-    //   inout         mdio,
-    //   output        mdc
-    .reset_n (~S_rst),
-    .sysclk_P (S_Ethernet_clk),
-    .rgmii_txd (rgmii_txd),
-    .rgmii_tx_ctl (rgmii_tx_ctl),
-    .rgmii_txc (rgmii_txc),
-    .rgmii_rxd (rgmii_rxd),
-    .rgmii_rx_ctl (rgmii_rx_ctl),
-    .rgmii_rxc (rgmii_rxc),
-    .mdio (mdio),
-    .mdc (mdc)
-    );
+//    al_temac u_al_temac(
+//    //   // 异步复位
+//    //   input         reset_n,
+//    //   // 时钟
+//    //   input wire    sysclk_P,
+//    //   // RGMII 接口
+//    //   output [3:0]  rgmii_txd,
+//    //   output        rgmii_tx_ctl,
+//    //   output        rgmii_txc,
+//    //   input  [3:0]  rgmii_rxd,
+//    //   input         rgmii_rx_ctl,
+//    //   input         rgmii_rxc,
+//    //   // MDIO 接口
+//    //   //---------------
+//    //   inout         mdio,
+//    //   output        mdc
+//    .reset_n (~S_rst),
+//    .sysclk_P (S_Ethernet_clk),
+//    .rgmii_txd (rgmii_txd),
+//    .rgmii_tx_ctl (rgmii_tx_ctl),
+//    .rgmii_txc (rgmii_txc),
+//    .rgmii_rxd (rgmii_rxd),
+//    .rgmii_rx_ctl (rgmii_rx_ctl),
+//    .rgmii_rxc (rgmii_rxc),
+//    .mdio (mdio),
+//    .mdc (mdc)
+//    );
     
     wire [1:0] I_key;
     
