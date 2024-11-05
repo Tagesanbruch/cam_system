@@ -5,9 +5,9 @@ module state_control (
     output [4:0] state
 );
 parameter DB_BITS = 19;
-wire [1: 0] db_key;
-reg [1: 0] db_key_r;
-reg [4:0] state_r;
+wire [1: 0] db_key;//synthesis keep
+reg [1: 0] db_key_r;//synthesis keep
+reg [4:0] state_r;//synthesis keep
 assign state = state_r;
 // 按键 - PWM
 always @(posedge clk or negedge rst_n ) begin

@@ -757,6 +757,66 @@ u_uifdma_axi_ddr
     .O_vtc_de_valid(vtc_de_valid)//视频数据有效
     );
 
+    // wire        ch1_vsync;  //synthesis keep
+    // wire        ch1_href;   //synthesis keep
+    // wire [23:0] ch1_rgb;    //synthesis keep
+    wire        ch2_vsync;  //synthesis keep
+    wire        ch2_href;   //synthesis keep
+    wire [23:0] ch2_rgb;    //synthesis keep
+    wire        post_vsync; //synthesis keep
+    wire        post_href;  //synthesis keep
+    wire [23:0] post_rgb;   //synthesis keep
+
+    mixer #(
+    .CH2_X0(0),
+    .CH2_Y0(0),
+    .CH2_X1(640),
+    .CH2_Y1(480)
+    ) u_mixer (
+        .I_clk          (clk),
+        .I_rst_n        (rst_n),
+
+        .I_ch1_vsync    (post_frame_vsync),
+        .I_ch1_href     (post_frame_href),
+        .I_ch1_rgb      (post_img_pixel),
+
+        .I_ch2_vsync    (ch2_vsync),
+        .I_ch2_href     (ch2_href),
+        .I_ch2_rgb      (ch2_rgb),
+
+        .O_post_vsync   (post_vsync),
+        .O_post_href    (post_href),
+        .O_post_rgb     (post_rgb)
+    );
+
+    wire [23:0]fb_dia;      //synthesis keep    
+    wire [17:0]fb_addra;    //synthesis keep        
+    wire fb_cea;            //synthesis keep
+    wire fb_clka;           //synthesis keep
+    wire [23:0] fb_dob;     //synthesis keep        
+    wire [17:0] fb_addrb;   //synthesis keep        
+    wire fb_ceb;            //synthesis keep
+    wire fb_clkb;           //synthesis keep
+    assign fb_clkb = clk;
+    ram_display u_ram_display(
+        .clk(clk),
+        .rst_n(rst_n),
+        .start(post_frame_vsync),
+        .out_vsync(ch2_vsync),
+        .out_href(ch2_href),
+        .out_rgb(ch2_rgb)
+    );
+    // framebuffer_ram u_framebuffer_ram( 
+    //     .dia    (fb_dia), 
+    //     .addra  (fb_addra), 
+    //     .cea    (fb_cea), 
+    //     .clka   (fb_clka),
+    //     .dob    (fb_dob), 
+    //     .addrb  (fb_addrb), 
+    //     .ceb    (fb_ceb),
+    //     .clkb   (fb_clkb)
+    // );
+
 
     //hdmi 输出IP
     hdmi_tx#(
@@ -781,9 +841,9 @@ u_uifdma_axi_ddr
     .I_rst              ( S_rst              ),//异步复位信号，高电平有效
 
     .I_video_rgb_enable (1'b1                ),//是否使能RGB输入接口，设置1使能，否则采用stream video时序接口  
-    .I_video_in_vs      (post_frame_vsync            ),//RGB 输入VS 帧同步
-    .I_video_in_de      (post_frame_href            ),//RGB 输入de有效
-    .I_video_in_data    (post_img_pixel   ), //视频输入数据     
+    .I_video_in_vs      (post_vsync            ),//RGB 输入VS 帧同步
+    .I_video_in_de      (post_href            ),//RGB 输入de有效
+    .I_video_in_data    (post_rgb   ), //视频输入数据     
 
     .O_hdmi_clk_p       ( O_hdmi_clk_p       ),//HDMI时钟通道
     .O_hdmi_tx_p        ( O_hdmi_tx_p        )//HDMI数据通道

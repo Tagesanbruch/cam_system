@@ -1,0 +1,312 @@
+<chipwatcher project_name="cam_system" bit_file="cam_system_Runs/phy_mix/cam_system.bit" bid_file="cam_system_Runs/phy_mix/cam_system_inst.bid" chip_name="PH1A90SBG484">
+<!-- HMAC is: 35f0254c7c46143fc75337d91667d2652ef2a98b821dbd4be51aba101ef8e343 -->
+	<instance name="auto_chipwatcher_0" id="0" enabled="yes">
+		<clock clk_name="I_sys_clk_25m" polarity="posedge"/>
+		<config bram_name="auto_chipwatcher_0_logicbram" sample_depth="4096"/>
+		<signal_vec>
+			<data_nets>
+				<net name="ch2_href"/>
+				<net name="ch2_rgb[0]"/>
+				<net name="ch2_rgb[10]"/>
+				<net name="ch2_rgb[11]"/>
+				<net name="ch2_rgb[12]"/>
+				<net name="ch2_rgb[13]"/>
+				<net name="ch2_rgb[14]"/>
+				<net name="ch2_rgb[15]"/>
+				<net name="ch2_rgb[16]"/>
+				<net name="ch2_rgb[17]"/>
+				<net name="ch2_rgb[18]"/>
+				<net name="ch2_rgb[19]"/>
+				<net name="ch2_rgb[1]"/>
+				<net name="ch2_rgb[20]"/>
+				<net name="ch2_rgb[21]"/>
+				<net name="ch2_rgb[22]"/>
+				<net name="ch2_rgb[23]"/>
+				<net name="ch2_rgb[2]"/>
+				<net name="ch2_rgb[3]"/>
+				<net name="ch2_rgb[4]"/>
+				<net name="ch2_rgb[5]"/>
+				<net name="ch2_rgb[6]"/>
+				<net name="ch2_rgb[7]"/>
+				<net name="ch2_rgb[8]"/>
+				<net name="ch2_rgb[9]"/>
+				<net name="ch2_vsync"/>
+				<net name="fb_addra[0]"/>
+				<net name="fb_addra[10]"/>
+				<net name="fb_addra[11]"/>
+				<net name="fb_addra[12]"/>
+				<net name="fb_addra[13]"/>
+				<net name="fb_addra[14]"/>
+				<net name="fb_addra[15]"/>
+				<net name="fb_addra[16]"/>
+				<net name="fb_addra[17]"/>
+				<net name="fb_addra[1]"/>
+				<net name="fb_addra[2]"/>
+				<net name="fb_addra[3]"/>
+				<net name="fb_addra[4]"/>
+				<net name="fb_addra[5]"/>
+				<net name="fb_addra[6]"/>
+				<net name="fb_addra[7]"/>
+				<net name="fb_addra[8]"/>
+				<net name="fb_addra[9]"/>
+				<net name="fb_addrb[0]"/>
+				<net name="fb_addrb[10]"/>
+				<net name="fb_addrb[11]"/>
+				<net name="fb_addrb[12]"/>
+				<net name="fb_addrb[13]"/>
+				<net name="fb_addrb[14]"/>
+				<net name="fb_addrb[15]"/>
+				<net name="fb_addrb[16]"/>
+				<net name="fb_addrb[17]"/>
+				<net name="fb_addrb[1]"/>
+				<net name="fb_addrb[2]"/>
+				<net name="fb_addrb[3]"/>
+				<net name="fb_addrb[4]"/>
+				<net name="fb_addrb[5]"/>
+				<net name="fb_addrb[6]"/>
+				<net name="fb_addrb[7]"/>
+				<net name="fb_addrb[8]"/>
+				<net name="fb_addrb[9]"/>
+				<net name="fb_cea"/>
+				<net name="fb_ceb"/>
+				<net name="fb_clka"/>
+				<net name="fb_clkb"/>
+				<net name="fb_dia[0]"/>
+				<net name="fb_dia[10]"/>
+				<net name="fb_dia[11]"/>
+				<net name="fb_dia[12]"/>
+				<net name="fb_dia[13]"/>
+				<net name="fb_dia[14]"/>
+				<net name="fb_dia[15]"/>
+				<net name="fb_dia[16]"/>
+				<net name="fb_dia[17]"/>
+				<net name="fb_dia[18]"/>
+				<net name="fb_dia[19]"/>
+				<net name="fb_dia[1]"/>
+				<net name="fb_dia[20]"/>
+				<net name="fb_dia[21]"/>
+				<net name="fb_dia[22]"/>
+				<net name="fb_dia[23]"/>
+				<net name="fb_dia[2]"/>
+				<net name="fb_dia[3]"/>
+				<net name="fb_dia[4]"/>
+				<net name="fb_dia[5]"/>
+				<net name="fb_dia[6]"/>
+				<net name="fb_dia[7]"/>
+				<net name="fb_dia[8]"/>
+				<net name="fb_dia[9]"/>
+				<net name="fb_dob[0]"/>
+				<net name="fb_dob[10]"/>
+				<net name="fb_dob[11]"/>
+				<net name="fb_dob[12]"/>
+				<net name="fb_dob[13]"/>
+				<net name="fb_dob[14]"/>
+				<net name="fb_dob[15]"/>
+				<net name="fb_dob[16]"/>
+				<net name="fb_dob[17]"/>
+				<net name="fb_dob[18]"/>
+				<net name="fb_dob[19]"/>
+				<net name="fb_dob[1]"/>
+				<net name="fb_dob[20]"/>
+				<net name="fb_dob[21]"/>
+				<net name="fb_dob[22]"/>
+				<net name="fb_dob[23]"/>
+				<net name="fb_dob[2]"/>
+				<net name="fb_dob[3]"/>
+				<net name="fb_dob[4]"/>
+				<net name="fb_dob[5]"/>
+				<net name="fb_dob[6]"/>
+				<net name="fb_dob[7]"/>
+				<net name="fb_dob[8]"/>
+				<net name="fb_dob[9]"/>
+				<net name="post_href"/>
+				<net name="post_rgb[0]"/>
+				<net name="post_rgb[10]"/>
+				<net name="post_rgb[11]"/>
+				<net name="post_rgb[12]"/>
+				<net name="post_rgb[13]"/>
+				<net name="post_rgb[14]"/>
+				<net name="post_rgb[15]"/>
+				<net name="post_rgb[16]"/>
+				<net name="post_rgb[17]"/>
+				<net name="post_rgb[18]"/>
+				<net name="post_rgb[19]"/>
+				<net name="post_rgb[1]"/>
+				<net name="post_rgb[20]"/>
+				<net name="post_rgb[21]"/>
+				<net name="post_rgb[22]"/>
+				<net name="post_rgb[23]"/>
+				<net name="post_rgb[2]"/>
+				<net name="post_rgb[3]"/>
+				<net name="post_rgb[4]"/>
+				<net name="post_rgb[5]"/>
+				<net name="post_rgb[6]"/>
+				<net name="post_rgb[7]"/>
+				<net name="post_rgb[8]"/>
+				<net name="post_rgb[9]"/>
+				<net name="post_vsync"/>
+			</data_nets>
+			<watcher_nodes>
+				<net name="ch2_href" op="equal" type="comb" trigger="enable"/>
+				<bus name="ch2_rgb" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="ch2_rgb[23]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[22]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[21]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[20]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[19]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[18]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[17]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[16]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[15]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[14]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[13]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[12]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[11]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[10]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[9]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[8]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[7]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[6]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[5]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[4]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[3]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[2]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[1]" type="comb" trigger="enable"/>
+					<net name="ch2_rgb[0]" type="comb" trigger="enable"/>
+				</bus>
+				<net name="ch2_vsync" op="equal" type="comb" trigger="enable"/>
+				<bus name="fb_addra" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="fb_addra[17]" type="comb" trigger="enable"/>
+					<net name="fb_addra[16]" type="comb" trigger="enable"/>
+					<net name="fb_addra[15]" type="comb" trigger="enable"/>
+					<net name="fb_addra[14]" type="comb" trigger="enable"/>
+					<net name="fb_addra[13]" type="comb" trigger="enable"/>
+					<net name="fb_addra[12]" type="comb" trigger="enable"/>
+					<net name="fb_addra[11]" type="comb" trigger="enable"/>
+					<net name="fb_addra[10]" type="comb" trigger="enable"/>
+					<net name="fb_addra[9]" type="comb" trigger="enable"/>
+					<net name="fb_addra[8]" type="comb" trigger="enable"/>
+					<net name="fb_addra[7]" type="comb" trigger="enable"/>
+					<net name="fb_addra[6]" type="comb" trigger="enable"/>
+					<net name="fb_addra[5]" type="comb" trigger="enable"/>
+					<net name="fb_addra[4]" type="comb" trigger="enable"/>
+					<net name="fb_addra[3]" type="comb" trigger="enable"/>
+					<net name="fb_addra[2]" type="comb" trigger="enable"/>
+					<net name="fb_addra[1]" type="comb" trigger="enable"/>
+					<net name="fb_addra[0]" type="comb" trigger="enable"/>
+				</bus>
+				<bus name="fb_addrb" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="fb_addrb[17]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[16]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[15]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[14]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[13]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[12]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[11]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[10]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[9]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[8]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[7]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[6]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[5]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[4]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[3]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[2]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[1]" type="comb" trigger="enable"/>
+					<net name="fb_addrb[0]" type="comb" trigger="enable"/>
+				</bus>
+				<net name="fb_cea" op="equal" type="comb" trigger="enable"/>
+				<net name="fb_ceb" op="equal" type="comb" trigger="enable"/>
+				<net name="fb_clka" op="equal" type="comb" trigger="enable"/>
+				<net name="fb_clkb" op="equal" type="reg" trigger="enable"/>
+				<bus name="fb_dia" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="fb_dia[23]" type="comb" trigger="enable"/>
+					<net name="fb_dia[22]" type="comb" trigger="enable"/>
+					<net name="fb_dia[21]" type="comb" trigger="enable"/>
+					<net name="fb_dia[20]" type="comb" trigger="enable"/>
+					<net name="fb_dia[19]" type="comb" trigger="enable"/>
+					<net name="fb_dia[18]" type="comb" trigger="enable"/>
+					<net name="fb_dia[17]" type="comb" trigger="enable"/>
+					<net name="fb_dia[16]" type="comb" trigger="enable"/>
+					<net name="fb_dia[15]" type="comb" trigger="enable"/>
+					<net name="fb_dia[14]" type="comb" trigger="enable"/>
+					<net name="fb_dia[13]" type="comb" trigger="enable"/>
+					<net name="fb_dia[12]" type="comb" trigger="enable"/>
+					<net name="fb_dia[11]" type="comb" trigger="enable"/>
+					<net name="fb_dia[10]" type="comb" trigger="enable"/>
+					<net name="fb_dia[9]" type="comb" trigger="enable"/>
+					<net name="fb_dia[8]" type="comb" trigger="enable"/>
+					<net name="fb_dia[7]" type="comb" trigger="enable"/>
+					<net name="fb_dia[6]" type="comb" trigger="enable"/>
+					<net name="fb_dia[5]" type="comb" trigger="enable"/>
+					<net name="fb_dia[4]" type="comb" trigger="enable"/>
+					<net name="fb_dia[3]" type="comb" trigger="enable"/>
+					<net name="fb_dia[2]" type="comb" trigger="enable"/>
+					<net name="fb_dia[1]" type="comb" trigger="enable"/>
+					<net name="fb_dia[0]" type="comb" trigger="enable"/>
+				</bus>
+				<bus name="fb_dob" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="fb_dob[23]" type="comb" trigger="enable"/>
+					<net name="fb_dob[22]" type="comb" trigger="enable"/>
+					<net name="fb_dob[21]" type="comb" trigger="enable"/>
+					<net name="fb_dob[20]" type="comb" trigger="enable"/>
+					<net name="fb_dob[19]" type="comb" trigger="enable"/>
+					<net name="fb_dob[18]" type="comb" trigger="enable"/>
+					<net name="fb_dob[17]" type="comb" trigger="enable"/>
+					<net name="fb_dob[16]" type="comb" trigger="enable"/>
+					<net name="fb_dob[15]" type="comb" trigger="enable"/>
+					<net name="fb_dob[14]" type="comb" trigger="enable"/>
+					<net name="fb_dob[13]" type="comb" trigger="enable"/>
+					<net name="fb_dob[12]" type="comb" trigger="enable"/>
+					<net name="fb_dob[11]" type="comb" trigger="enable"/>
+					<net name="fb_dob[10]" type="comb" trigger="enable"/>
+					<net name="fb_dob[9]" type="comb" trigger="enable"/>
+					<net name="fb_dob[8]" type="comb" trigger="enable"/>
+					<net name="fb_dob[7]" type="comb" trigger="enable"/>
+					<net name="fb_dob[6]" type="comb" trigger="enable"/>
+					<net name="fb_dob[5]" type="comb" trigger="enable"/>
+					<net name="fb_dob[4]" type="comb" trigger="enable"/>
+					<net name="fb_dob[3]" type="comb" trigger="enable"/>
+					<net name="fb_dob[2]" type="comb" trigger="enable"/>
+					<net name="fb_dob[1]" type="comb" trigger="enable"/>
+					<net name="fb_dob[0]" type="comb" trigger="enable"/>
+				</bus>
+				<net name="post_href" op="equal" type="reg" trigger="enable"/>
+				<bus name="post_rgb" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="post_rgb[23]" type="reg" trigger="enable"/>
+					<net name="post_rgb[22]" type="reg" trigger="enable"/>
+					<net name="post_rgb[21]" type="reg" trigger="enable"/>
+					<net name="post_rgb[20]" type="reg" trigger="enable"/>
+					<net name="post_rgb[19]" type="reg" trigger="enable"/>
+					<net name="post_rgb[18]" type="reg" trigger="enable"/>
+					<net name="post_rgb[17]" type="reg" trigger="enable"/>
+					<net name="post_rgb[16]" type="reg" trigger="enable"/>
+					<net name="post_rgb[15]" type="reg" trigger="enable"/>
+					<net name="post_rgb[14]" type="reg" trigger="enable"/>
+					<net name="post_rgb[13]" type="reg" trigger="enable"/>
+					<net name="post_rgb[12]" type="reg" trigger="enable"/>
+					<net name="post_rgb[11]" type="reg" trigger="enable"/>
+					<net name="post_rgb[10]" type="reg" trigger="enable"/>
+					<net name="post_rgb[9]" type="reg" trigger="enable"/>
+					<net name="post_rgb[8]" type="reg" trigger="enable"/>
+					<net name="post_rgb[7]" type="reg" trigger="enable"/>
+					<net name="post_rgb[6]" type="reg" trigger="enable"/>
+					<net name="post_rgb[5]" type="reg" trigger="enable"/>
+					<net name="post_rgb[4]" type="reg" trigger="enable"/>
+					<net name="post_rgb[3]" type="reg" trigger="enable"/>
+					<net name="post_rgb[2]" type="reg" trigger="enable"/>
+					<net name="post_rgb[1]" type="reg" trigger="enable"/>
+					<net name="post_rgb[0]" type="reg" trigger="enable"/>
+				</bus>
+				<net name="post_vsync" op="equal" type="reg" trigger="enable"/>
+			</watcher_nodes>
+		</signal_vec>
+		<trigger name="auto_chipwatcher_0_trigger" position="pre">
+			<condition level="1" enabled="yes" type="basic_and">
+				ch2_href == any && ch2_rgb[0] == low && ch2_rgb[10] == low && ch2_rgb[11] == low && ch2_rgb[12] == low && ch2_rgb[13] == low && ch2_rgb[14] == low && ch2_rgb[15] == low && ch2_rgb[16] == low && ch2_rgb[17] == low && ch2_rgb[18] == low && ch2_rgb[19] == low && ch2_rgb[1] == low && ch2_rgb[20] == low && ch2_rgb[21] == low && ch2_rgb[22] == low && ch2_rgb[23] == low && ch2_rgb[2] == low && ch2_rgb[3] == low && ch2_rgb[4] == low && ch2_rgb[5] == low && ch2_rgb[6] == low && ch2_rgb[7] == low && ch2_rgb[8] == low && ch2_rgb[9] == low && ch2_vsync == any && fb_addra[0] == low && fb_addra[10] == low && fb_addra[11] == low && fb_addra[12] == low && fb_addra[13] == low && fb_addra[14] == low && fb_addra[15] == low && fb_addra[16] == low && fb_addra[17] == low && fb_addra[1] == low && fb_addra[2] == low && fb_addra[3] == low && fb_addra[4] == low && fb_addra[5] == low && fb_addra[6] == low && fb_addra[7] == low && fb_addra[8] == low && fb_addra[9] == low && fb_addrb[0] == low && fb_addrb[10] == low && fb_addrb[11] == low && fb_addrb[12] == low && fb_addrb[13] == low && fb_addrb[14] == low && fb_addrb[15] == low && fb_addrb[16] == low && fb_addrb[17] == low && fb_addrb[1] == low && fb_addrb[2] == low && fb_addrb[3] == low && fb_addrb[4] == low && fb_addrb[5] == low && fb_addrb[6] == low && fb_addrb[7] == low && fb_addrb[8] == low && fb_addrb[9] == low && fb_cea == any && fb_ceb == any && fb_clka == any && fb_clkb == any && fb_dia[0] == low && fb_dia[10] == low && fb_dia[11] == low && fb_dia[12] == low && fb_dia[13] == low && fb_dia[14] == low && fb_dia[15] == low && fb_dia[16] == low && fb_dia[17] == low && fb_dia[18] == low && fb_dia[19] == low && fb_dia[1] == low && fb_dia[20] == low && fb_dia[21] == low && fb_dia[22] == low && fb_dia[23] == low && fb_dia[2] == low && fb_dia[3] == low && fb_dia[4] == low && fb_dia[5] == low && fb_dia[6] == low && fb_dia[7] == low && fb_dia[8] == low && fb_dia[9] == low && fb_dob[0] == low && fb_dob[10] == low && fb_dob[11] == low && fb_dob[12] == low && fb_dob[13] == low && fb_dob[14] == low && fb_dob[15] == low && fb_dob[16] == low && fb_dob[17] == low && fb_dob[18] == low && fb_dob[19] == low && fb_dob[1] == low && fb_dob[20] == low && fb_dob[21] == low && fb_dob[22] == low && fb_dob[23] == low && fb_dob[2] == low && fb_dob[3] == low && fb_dob[4] == low && fb_dob[5] == low && fb_dob[6] == low && fb_dob[7] == low && fb_dob[8] == low && fb_dob[9] == low && post_href == any && post_rgb[0] == low && post_rgb[10] == low && post_rgb[11] == low && post_rgb[12] == low && post_rgb[13] == low && post_rgb[14] == low && post_rgb[15] == low && post_rgb[16] == low && post_rgb[17] == low && post_rgb[18] == low && post_rgb[19] == low && post_rgb[1] == low && post_rgb[20] == low && post_rgb[21] == low && post_rgb[22] == low && post_rgb[23] == low && post_rgb[2] == low && post_rgb[3] == low && post_rgb[4] == low && post_rgb[5] == low && post_rgb[6] == low && post_rgb[7] == low && post_rgb[8] == low && post_rgb[9] == low && post_vsync == any
+			</condition>
+			<log>
+			</log>
+		</trigger>
+	</instance>
+</chipwatcher>

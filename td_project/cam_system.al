@@ -394,6 +394,22 @@
                     <Attr Name="CompileOrder" Val="60"/>
                 </FileInfo>
             </File>
+            <File Path="../user_source/hdl_source/video_processing/mixer/mixer.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="61"/>
+                </FileInfo>
+            </File>
+            <File Path="../user_source/hdl_source/video_processing/mixer/ram_display.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="63"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <VHDL>
             <File Path="../user_source/hdl_source/video_processing/linebuffer_Wapper/ImageXlib_arch.vhd">
@@ -452,12 +468,12 @@
             </File>
         </SDC_FILE>
         <CWC_FILE>
-            <File Path="img_sobel.cwc">
+            <File Path="ram.cwc">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="58"/>
+                    <Attr Name="CompileOrder" Val="64"/>
                 </FileInfo>
             </File>
         </CWC_FILE>
@@ -530,6 +546,14 @@
                     <Attr Name="CompileOrder" Val="54"/>
                 </FileInfo>
             </File>
+            <File Path="al_ip/framebuffer_ram.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="62"/>
+                </FileInfo>
+            </File>
         </IP_FILE>
     </Source_Files>
     <FileSets>
@@ -574,7 +598,13 @@
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="syn_edge" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
+        <Run Name="syn_edge" Type="Synthesis" ConstraintSet="constraint_1" Description="">
+            <Strategy Name="Default_Synthesis_Strategy">
+            </Strategy>
+            <UserParams>
+            </UserParams>
+        </Run>
+        <Run Name="syn_mix" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
             <Strategy Name="Default_Synthesis_Strategy">
             </Strategy>
             <UserParams>
@@ -604,7 +634,13 @@
             <UserParams>
             </UserParams>
         </Run>
-        <Run Name="phy_edge" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_edge" Active="true">
+        <Run Name="phy_edge" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_edge">
+            <Strategy Name="Default_PhysicalDesign_Strategy">
+            </Strategy>
+            <UserParams>
+            </UserParams>
+        </Run>
+        <Run Name="phy_mix" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_mix" Active="true">
             <Strategy Name="Default_PhysicalDesign_Strategy">
             </Strategy>
             <UserParams>
